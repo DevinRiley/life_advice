@@ -2,10 +2,22 @@
 
 /* Controllers */
 
-angular.module('myApp.controllers', []).
-  controller('MyCtrl1', [function() {
+angular.module('app.controllers', []).
+  controller('appController', [function() {
 
   }])
-  .controller('MyCtrl2', [function() {
+  .controller('sidebarController', [function() {
+
+  }])
+  .controller('filterController', [function() {
+
+  }])
+  .controller('sidebarController', [function() {
+
+  }])
+  .controller('emailShortController', [function() {
+
+  }])
+  .controller('contentController', [function() {
 
   }]);
