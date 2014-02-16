@@ -28,3 +28,15 @@
   content: "";
   padding: 0;
 }
+
+.sidebar {
+  float: left
+}
+
+.highlight {
+  color: red !important;
+}
+
+.content {
+  float: right;
+}
