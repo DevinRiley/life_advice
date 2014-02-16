@@ -32,7 +32,7 @@
     </div>
 
     <div ng-controller="contentController" class="content">
-      <div ng-repeat="email in emails | orderBy:openPosition">
+      <div ng-repeat="email in emails | filter:{open:true} | orderBy:'-position'">
         <div ng-controller="emailFullController">
           <h1> {{ email.title }}</h1>
           <span ng-click="closeEmail()"> Close </span>

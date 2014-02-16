@@ -15,9 +15,9 @@ angular.module('app.controllers', []).
 
   }])
   .controller('filterController', [ '$scope', function($scope) {
-    $scope.tags = {};
 
     $scope.setTags = function() {
+        $scope.tags = {};
         angular.forEach($scope.emails, function(value, key) {
         angular.forEach( value.tags, function(value, key){
           if(!$scope.tags[value]) {
@@ -33,9 +33,13 @@ angular.module('app.controllers', []).
   }])
   .controller('emailShortController', [ '$scope', function($scope) {
     $scope.openEmail = function() {
+      if( $scope.email.open ) {
+        return false;
+      }
       $scope.email.open = true;
+      $scope.email.position = $scope.openPosition;
       $scope.incrementPosition();
-      console.log($scope.openPosition);
+      console.log($scope.email.position);
     }
 
 
