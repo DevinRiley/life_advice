@@ -9,6 +9,9 @@ angular.module('app.controllers', []).
   }])
   .controller('sidebarController', [ '$scope', function($scope) {
     $scope.openPosition = 0;
+    $scope.incrementPosition = function() {
+      $scope.openPosition += 1;
+    }
 
   }])
   .controller('filterController', [ '$scope', function($scope) {
@@ -31,8 +34,7 @@ angular.module('app.controllers', []).
   .controller('emailShortController', [ '$scope', function($scope) {
     $scope.openEmail = function() {
       $scope.email.open = true;
-      $scope.email.openPosition = $scope.openPosition;
-      $scope.openPosition += 1;
+      $scope.incrementPosition();
       console.log($scope.openPosition);
     }
 
