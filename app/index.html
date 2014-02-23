@@ -11,31 +11,39 @@
 
   <div ng-controller="sidebarController" class="sidebar">
 
+    <h3 class="sidebar-title">Filter by Tag</h3>
     <div ng-controller="filterController">
-      <div ng-repeat="(tag, count) in tags">
-        <a href="#">{{ tag }}</a>
-      </div> <!-- end filterController -->
-      <div ng-repeat="email in emails">
-
-        <div ng-controller="emailShortController"
-          ng-click="openEmail()"
-          ng-class="{ highlight: email.open }" 
-          > 
-          <h3>{{ email.title }}</h3>
-        </div>
-
-      </div>
-
-    </div> 
-
-
+        <table class="tag-table">
+            <tr ng-repeat="tag in tags | orderBy:'-count'"
+                ng-click="toggleTag(tag)"
+                ng-class="{ highlight: tag.selected }"
+                class="clickable">
+                <td class="tag-name">{{ tag.name }}</td>
+                <td class="tag-count">{{ tag.count }}</td>
+            </tr>
+        </table>
     </div>
+
+    <h3 class="sidebar-title">Emails</h3>
+    <div ng-repeat="email in emails">
+        <div ng-controller="emailShortController"
+          ng-click="toggleEmail()"
+          ng-class="{ highlight: email.open }"
+          >
+        <span class="pull-quote clickable">{{ email.title }}</span>
+        </div>
+    </div>
+
+  </div>
 
     <div ng-controller="contentController" class="content">
       <div ng-repeat="email in emails | filter:{open:true} | orderBy:'-position'">
-        <div ng-controller="emailFullController">
-          <h1> {{ email.title }}</h1>
-          <span ng-click="closeEmail()"> Close </span>
+        <div class="content-email" ng-controller="emailFullController">
+          <span class="content-close clickable" ng-click="closeEmail()"> Close </span>
+          <h3 class="content-title"> {{ email.title }}</h1>
+          <div class="content-body">
+            {{email.message}}
+          </div>
         </div>
       </div>
     </div>
