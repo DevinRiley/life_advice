@@ -25,22 +25,28 @@
     </div>
 
     <h3 class="sidebar-title">Emails</h3>
-    <div ng-repeat="email in emails">
-        <div ng-controller="emailShortController"
-          ng-click="toggleEmail()"
-          ng-class="{ highlight: email.open }"
-          >
-        <span class="pull-quote clickable">{{ email.title }}</span>
+    <div ng-repeat="email in emails | filter:tagFilter">
+        <div ng-controller="emailShortController">
+            <span ng-click="toggleEmail()"
+                  class="pull-quote clickable"
+                  ng-class="{ highlight: email.open }">
+                {{ email.title }}
+            </span>
         </div>
     </div>
 
   </div>
 
     <div ng-controller="contentController" class="content">
-      <div ng-repeat="email in emails | filter:{open:true} | orderBy:'-position'">
+      <div ng-repeat="email in emails | filter:{open:true} | filter:tagFilter | orderBy:'-position'">
         <div class="content-email" ng-controller="emailFullController">
           <span class="content-close clickable" ng-click="closeEmail()"> Close </span>
           <h3 class="content-title"> {{ email.title }}</h1>
+          <span class="content-tag"
+                ng-repeat="tag in email.tags"
+                ng-class="{ highlight: inSelectedTagNames(tag) }">
+            {{tag}}
+          </span>
           <div class="content-body">
             {{email.message}}
           </div>

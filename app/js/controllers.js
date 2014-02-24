@@ -6,6 +6,24 @@ angular.module('app.controllers', []).
   controller('appController', [ '$scope', function($scope) {
     $scope.emails = window.data;
 
+    // for calculating an intercetion of arrays, makes easier to compage tags
+    $scope.intersect = function (a, b) {
+        var ai=0, bi=0;
+        var result = new Array();
+        while( ai < a.length && bi < b.length )
+        {
+            if      (a[ai] < b[bi] ){ ai++; }
+            else if (a[ai] > b[bi] ){ bi++; }
+            else /* they're equal */
+            {
+                result.push(a[ai]);
+                ai++;
+                bi++;
+            }
+        }
+        return result;
+    }
+
     // tags is needed in the sidebar anf the main content, so setting up here
     $scope.createTags = function() {
         $scope.tags = []; //the tag object we care about and used in UI
@@ -35,8 +53,44 @@ angular.module('app.controllers', []).
     };
     $scope.createTags(); //invoke immediately
 
+    // selectedTagNames an array of tag names, makes easier to work with email[0].tags
+    // which are also an array of strings. $scope.tags is an array of objects
+    $scope.selectedTagNames = [];
+    $scope.toggleTag = function(tag){
 
-  }])
+        // this is kinda ugh, but wanna let people pass in a string or an object, so
+        // easy to call from anywhere
+        if ( typeof tag === 'string') {
+            angular.forEach( $scope.tags , function(tagFromList, i) {
+                if( tagFromList.name == tag ) {
+                    tag = tagFromList;
+                }
+            });
+        }
+
+        var tagIndex = $scope.selectedTagNames.indexOf(tag.name)
+        if( tagIndex == -1 ){
+            $scope.selectedTagNames.push(tag.name)
+        } else {
+            $scope.selectedTagNames.splice(tagIndex, 1)
+        }
+        tag.selected = !tag.selected;
+    }
+
+    //used in sidebar and content
+    $scope.tagFilter = function(email){
+        if($scope.selectedTagNames.length == 0){
+            return true
+        } else {
+            console.log($scope.intersect($scope.selectedTagNames,email.tags))
+            return ( $scope.intersect($scope.selectedTagNames,email.tags).length > 0)
+        }
+    }
+
+    $scope.inSelectedTagNames = function(tagname){
+        return ( $scope.selectedTagNames.indexOf(tagname) > -1)
+    }
+}])
   .controller('sidebarController', [ '$scope', function($scope) {
     $scope.openPosition = 0;
     $scope.incrementPosition = function() {
@@ -45,9 +99,6 @@ angular.module('app.controllers', []).
 
   }])
   .controller('filterController', [ '$scope', function($scope) {
-        $scope.toggleTag = function(tag){
-            tag.selected = !tag.selected;
-        }
 
   }])
   .controller('emailShortController', [ '$scope', function($scope) {
