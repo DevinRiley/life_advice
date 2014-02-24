@@ -41,7 +41,7 @@
       <div ng-repeat="email in emails | filter:{open:true} | filter:tagFilter | orderBy:'-position'">
         <div class="content-email" ng-controller="emailFullController">
           <span class="content-close clickable" ng-click="closeEmail()"> Close </span>
-          <h3 class="content-title"> {{ email.title }}</h1>
+          <h3 class="content-title highlight"> {{ email.title }}</h1>
           <span class="content-tag"
                 ng-repeat="tag in email.tags"
                 ng-class="{ highlight: inSelectedTagNames(tag) }">
