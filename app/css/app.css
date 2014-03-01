@@ -108,6 +108,10 @@
   margin-bottom: 20px;
 }
 
+.content-body {
+    white-space: pre-wrap;
+}
+
 .pull-quote {
   margin-top: 30px;
 }

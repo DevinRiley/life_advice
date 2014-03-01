@@ -148,4 +148,8 @@ angular.module('app.controllers', []).
        $scope.email.open = false;
      }
 
+     $scope.emailMessage = function(email){
+            return email.message
+     }
+
   }]);

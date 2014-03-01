@@ -22,7 +22,7 @@ data.each_with_index do |email, i|
   end
 
   if email['message']
-    email['message'].gsub!("\n", '<br>')
+    # email['message'].gsub!("\n", '<br>')
   end
 
   email['position'] = i
