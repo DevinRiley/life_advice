@@ -18,11 +18,7 @@ data.each_with_index do |email, i|
   email.delete('sender')
 
   if email['tags']
-    email['tags'] = email['tags'].split(',')
-  end
-
-  if email['message']
-    # email['message'].gsub!("\n", '<br>')
+    email['tags'] = email['tags'].gsub(', ', ',').split(',')
   end
 
   email['position'] = i

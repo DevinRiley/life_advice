@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd6b371e-e54e-493f-8387-227fc2c83b71" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/css/app.css" afterPath="$PROJECT_DIR$/app/css/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/controllers.js" afterPath="$PROJECT_DIR$/app/js/controllers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/csv_to_json.rb" afterPath="$PROJECT_DIR$/scripts/csv_to_json.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/data.js" afterPath="$PROJECT_DIR$/app/js/data.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
@@ -11,7 +9,7 @@
     <ignored path="life_advice.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="fd6b371e-e54e-493f-8387-227fc2c83b71" time="1393702763460" ignored="false" />
-    <file path="/csv_to_json.rb" changelist="fd6b371e-e54e-493f-8387-227fc2c83b71" time="1393709454465" ignored="false" />
+    <file path="/csv_to_json.rb" changelist="fd6b371e-e54e-493f-8387-227fc2c83b71" time="1393710498693" ignored="false" />
     <file path="/emails.csv" changelist="fd6b371e-e54e-493f-8387-227fc2c83b71" time="1393704669102" ignored="false" />
     <file path="/index.html" changelist="fd6b371e-e54e-493f-8387-227fc2c83b71" time="1393709147085" ignored="false" />
     <file path="/controllers.js" changelist="fd6b371e-e54e-493f-8387-227fc2c83b71" time="1393709259858" ignored="false" />
@@ -38,16 +36,16 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="38" selection-start="1932" selection-end="1944" vertical-scroll-proportion="-6.107143">
+            <state line="54" column="19" selection-start="2043" selection-end="2043" vertical-scroll-proportion="-8.142858">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="app.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/css/app.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="111" column="26" selection-start="1376" selection-end="1376" vertical-scroll-proportion="0.78409094">
+            <state line="111" column="26" selection-start="1376" selection-end="1376" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -56,7 +54,16 @@
       <file leaf-file-name="csv_to_json.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/csv_to_json.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="6" selection-start="387" selection-end="387" vertical-scroll-proportion="0.0">
+            <state line="32" column="22" selection-start="523" selection-end="523" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="emails.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/emails.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="12" selection-start="0" selection-end="48260" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
@@ -71,10 +78,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="data.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="data.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/data.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="669" column="1" selection-start="51163" selection-end="51163" vertical-scroll-proportion="0.0">
+            <state line="669" column="1" selection-start="51059" selection-end="51059" vertical-scroll-proportion="0.826484">
               <folding />
             </state>
           </provider>
@@ -84,15 +91,6 @@
         <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="152" column="35" selection-start="4717" selection-end="4717" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="emails.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/emails.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="48364" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
@@ -120,10 +118,10 @@
         <option value="$PROJECT_DIR$/scripts/emails.csv" />
         <option value="$PROJECT_DIR$/scripts/emails.json" />
         <option value="$PROJECT_DIR$/app/js/controllers.js" />
+        <option value="$PROJECT_DIR$/app/css/app.css" />
+        <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/scripts/csv_to_json.rb" />
         <option value="$PROJECT_DIR$/app/js/data.js" />
-        <option value="$PROJECT_DIR$/app/index.html" />
-        <option value="$PROJECT_DIR$/app/css/app.css" />
       </list>
     </option>
   </component>
@@ -277,7 +275,7 @@
     <frame x="0" y="22" width="1440" height="795" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3295129" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295129" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295129" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -363,13 +361,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/js/data.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="38" selection-start="300" selection-end="300" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="48" column="41" selection-start="1536" selection-end="1536" vertical-scroll-proportion="0.0" />
@@ -422,13 +413,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="152" column="35" selection-start="4717" selection-end="4717" vertical-scroll-proportion="0.0">
@@ -436,37 +420,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/csv_to_json.rb">
+    <entry file="file://$PROJECT_DIR$/app/css/app.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="6" selection-start="387" selection-end="387" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/emails.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="48364" vertical-scroll-proportion="-0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/data.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="669" column="1" selection-start="51163" selection-end="51163" vertical-scroll-proportion="0.0">
+        <state line="111" column="26" selection-start="1376" selection-end="1376" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="38" selection-start="1932" selection-end="1944" vertical-scroll-proportion="-6.107143">
+        <state line="54" column="19" selection-start="2043" selection-end="2043" vertical-scroll-proportion="-8.142858">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/css/app.css">
+    <entry file="file://$PROJECT_DIR$/app/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="111" column="26" selection-start="1376" selection-end="1376" vertical-scroll-proportion="0.78409094">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/csv_to_json.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="22" selection-start="523" selection-end="523" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/emails.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="12" selection-start="0" selection-end="48260" vertical-scroll-proportion="-0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="669" column="1" selection-start="51059" selection-end="51059" vertical-scroll-proportion="0.826484">
           <folding />
         </state>
       </provider>
