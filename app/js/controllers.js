@@ -138,6 +138,12 @@ angular.module('app.controllers', []).
   .controller('emailFullController', [ '$scope', function($scope) {
      // find way to not repeat this. I don't think angular is as into
      // inheritance, but need to look up
+  
+     $scope.showPullQuote = function() {
+       console.log("pullQuote");
+       return $scope.email.pullQuote && $scope.email.length > 300;
+     }
+
      $scope.closeEmail = function() {
        $scope.email.open = false;
      }

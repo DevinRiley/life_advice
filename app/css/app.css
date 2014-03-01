@@ -50,17 +50,25 @@
 
 .clickable:hover {
     cursor: pointer;
-    color: orange;
+    color: #FFAF00;
 }
 
 /*----- SIDE BAR Tags------*/
+.tag-name {
+  padding: 3px;
+}
+
+.tag-count {
+  padding: 3px
+}
+
 .tag-table{
     width:50%;
 }
 
 
 /*----- SIDE BAR EMAIL ------*/
-.pull-quote {
+.sidebar-subject {
     font-size: 1.75em;
 }
 
@@ -98,4 +106,8 @@
   padding: 20px;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.pull-quote {
+  margin-top: 30px;
 }
