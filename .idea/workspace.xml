@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd6b371e-e54e-493f-8387-227fc2c83b71" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/css/app.css" afterPath="$PROJECT_DIR$/app/css/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/controllers.js" afterPath="$PROJECT_DIR$/app/js/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/data.js" afterPath="$PROJECT_DIR$/app/js/data.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/csv_to_json.rb" afterPath="$PROJECT_DIR$/scripts/csv_to_json.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
     </list>
     <ignored path="life_advice.iws" />
@@ -12,6 +10,7 @@
     <file path="/Dummy.txt" changelist="fd6b371e-e54e-493f-8387-227fc2c83b71" time="1393702763460" ignored="false" />
     <file path="/csv_to_json.rb" changelist="fd6b371e-e54e-493f-8387-227fc2c83b71" time="1393707842688" ignored="false" />
     <file path="/emails.csv" changelist="fd6b371e-e54e-493f-8387-227fc2c83b71" time="1393704669102" ignored="false" />
+    <file path="/index.html" changelist="fd6b371e-e54e-493f-8387-227fc2c83b71" time="1393708139567" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +33,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="44" selection-start="1989" selection-end="1989" vertical-scroll-proportion="-11.535714">
+            <state line="57" column="38" selection-start="2168" selection-end="2168" vertical-scroll-proportion="-38.67857">
               <folding />
             </state>
           </provider>
@@ -43,7 +42,7 @@
       <file leaf-file-name="csv_to_json.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/csv_to_json.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="23" selection-start="476" selection-end="476" vertical-scroll-proportion="0.0">
+            <state line="29" column="16" selection-start="493" selection-end="493" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -52,7 +51,7 @@
       <file leaf-file-name="data.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/data.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="696" column="20" selection-start="55407" selection-end="55431" vertical-scroll-proportion="30.969555">
               <folding />
             </state>
           </provider>
@@ -61,7 +60,7 @@
       <file leaf-file-name="emails.json" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/emails.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="29" selection-start="0" selection-end="52553" vertical-scroll-proportion="-8.821428">
+            <state line="664" column="23" selection-start="0" selection-end="49438" vertical-scroll-proportion="-6.785714">
               <folding />
             </state>
           </provider>
@@ -90,9 +89,9 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/scripts/emails.csv" />
         <option value="$PROJECT_DIR$/scripts/emails.json" />
-        <option value="$PROJECT_DIR$/scripts/csv_to_json.rb" />
-        <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/app/js/data.js" />
+        <option value="$PROJECT_DIR$/app/index.html" />
+        <option value="$PROJECT_DIR$/scripts/csv_to_json.rb" />
       </list>
     </option>
   </component>
@@ -390,30 +389,30 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="38" selection-start="2168" selection-end="2168" vertical-scroll-proportion="-38.67857">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/csv_to_json.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="23" selection-start="476" selection-end="476" vertical-scroll-proportion="0.0">
+        <state line="29" column="16" selection-start="493" selection-end="493" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/emails.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="29" selection-start="0" selection-end="52553" vertical-scroll-proportion="-8.821428">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="44" selection-start="1989" selection-end="1989" vertical-scroll-proportion="-11.535714">
+        <state line="664" column="23" selection-start="0" selection-end="49438" vertical-scroll-proportion="-6.785714">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/data.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="696" column="20" selection-start="55407" selection-end="55431" vertical-scroll-proportion="30.969555">
           <folding />
         </state>
       </provider>
