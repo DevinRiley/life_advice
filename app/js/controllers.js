@@ -24,7 +24,6 @@ angular.module('app.controllers', []).
         return result;
     }
 
-    console.log('app controller');
     // tags is needed in the sidebar anf the main content, so setting up here
     $scope.createTags = function() {
         $scope.tags = []; //the tag object we care about and used in UI

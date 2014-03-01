@@ -69,7 +69,7 @@
 
 /*----- SIDE BAR EMAIL ------*/
 .sidebar-subject {
-    font-size: 1.75em;
+    font-size: 1.5em;
 }
 
 .sidebar-title {
@@ -99,15 +99,32 @@
     margin-bottom: 0px;
 }
 
-.content-email {
-  background: #FFFFF7;
-  border-radius: 3px;
-  color: black;
-  padding: 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
 .pull-quote {
   margin-top: 30px;
 }
+
+blockquote {
+  border-left-width: 2px;
+}
+
+.content-email {
+  background: #FFFFF7;
+  border-radius: 3px;
+  border: 2px solid #5bc0de;
+  color: black;
+  padding: 20px;
+  position: relative;
+  margin-top: 5px;
+  -webkit-animation: slidin 5s;
+}
+
+@-webkit-keyframes slidein {
+  0% { margin-left: 1000%; }
+  100% { margin-left: 0%; }
+}
+
+@keyframes slidein {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
