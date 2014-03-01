@@ -50,7 +50,7 @@
 
 .clickable:hover {
     cursor: pointer;
-    text-decoration: underline;
+    color: orange;
 }
 
 /*----- SIDE BAR Tags------*/
@@ -83,6 +83,7 @@
 .content-body {
     margin-top:10px;
     margin-bottom:80px;
+    max-width: 600px;
 }
 
 .content-title {
@@ -91,5 +92,10 @@
 }
 
 .content-email {
-
+  background: #FFFFF7;
+  border-radius: 3px;
+  color: black;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }

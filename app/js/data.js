@@ -23,27 +23,27 @@ window.data = [
     message: "you're lame."
   },
 
-    {
-        open: false,
-        position: 1,
-        tags: ['the matrix'],
-        title: "See ya later",
-        message: "nothing is permanent"
-    },
+  {
+      open: false,
+      position: 1,
+      tags: ['the matrix'],
+      title: "See ya later",
+      message: "nothing is permanent"
+  },
 
-    {
-        open: false,
-        position: 2,
-        tags: ['the matrix'],
-        title: "This is Morpheous",
-        message: "Hello Neo."
-    },
+  {
+      open: false,
+      position: 2,
+      tags: ['the matrix', 'religion'],
+      title: "This is Morpheous",
+      message: "Hello Neo."
+  },
 
-    {
-        open: false,
-        position: 3,
-        tags: ['meditation', 'religion'],
-        title: "Meet the Buddah",
-        message: "Kill the Buddah."
-    }
+  {
+      open: false,
+      position: 3,
+      tags: ['meditation', 'religion'],
+      title: "Meet the Buddah",
+      message: "Kill the Buddah."
+  }
 ]

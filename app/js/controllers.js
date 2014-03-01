@@ -6,7 +6,7 @@ angular.module('app.controllers', []).
   controller('appController', [ '$scope', function($scope) {
     $scope.emails = window.data;
 
-    // for calculating an intercetion of arrays, makes easier to compage tags
+    // for calculating an intersection of arrays, makes easier to compage tags
     $scope.intersect = function (a, b) {
         var ai=0, bi=0;
         var result = new Array();
@@ -24,6 +24,7 @@ angular.module('app.controllers', []).
         return result;
     }
 
+    console.log('app controller');
     // tags is needed in the sidebar anf the main content, so setting up here
     $scope.createTags = function() {
         $scope.tags = []; //the tag object we care about and used in UI
