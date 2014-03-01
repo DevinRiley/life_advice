@@ -121,6 +121,12 @@ blockquote {
 @-webkit-keyframes slidein {
   0% { margin-left: 1000%; }
   100% { margin-left: 0%; }
+.content-body {
+    white-space: pre-wrap;
+}
+
+.pull-quote {
+  margin-top: 30px;
 }
 
 @keyframes slidein {
