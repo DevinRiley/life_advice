@@ -29,14 +29,67 @@
   padding: 0;
 }
 
-.sidebar {
-  float: left
+.highlight {
+  color: #F69300;
 }
 
-.highlight {
-  color: red !important;
+.sidebar {
+    float: left;
+    width: 25%;
+    margin:10px;
+
 }
 
 .content {
   float: right;
+  width: 70%;
+    margin-right:20px;
+}
+
+/*----- General styles ------*/
+
+.clickable:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/*----- SIDE BAR Tags------*/
+.tag-table{
+    width:50%;
+}
+
+
+/*----- SIDE BAR EMAIL ------*/
+.pull-quote {
+    font-size: 1.75em;
+}
+
+.sidebar-title {
+    padding-bottom: 3px;
+    border-bottom: 1px dotted #7F8CA9;
+}
+
+/*---- Main Content ------*/
+
+.content-close {
+    float:right;
+}
+
+.content-tag {
+    font-size: 0.8em;
+    margin-right: 10px;
+}
+
+.content-body {
+    margin-top:10px;
+    margin-bottom:80px;
+}
+
+.content-title {
+    font-size:2em;
+    margin-bottom: 0px;
+}
+
+.content-email {
+
 }
