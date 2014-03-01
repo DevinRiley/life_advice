@@ -28,7 +28,7 @@
     <div ng-repeat="email in emails | filter:tagFilter">
         <div ng-controller="emailShortController">
             <span ng-click="toggleEmail()"
-                  class="pull-quote clickable"
+                  class="sidebar-subject clickable"
                   ng-class="{ highlight: email.open }">
                 {{ email.title }}
             </span>
@@ -45,10 +45,19 @@
           <span class="content-tag"
                 ng-repeat="tag in email.tags"
                 ng-class="{ highlight: inSelectedTagNames(tag) }">
-            {{tag}}
+            {{ tag }}
           </span>
-          <div class="content-body">
-            {{email.message}}
+          <div class="row">
+            <div class="col-sm-8">
+              <div class="content-body">
+                <p>{{ email.message }}</p>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div ng-show="email.pullQuote" class="pull-quote">
+                <blockquote>{{ email.pullQuote }}</blockquote>
+              </div>
+            </div>
           </div>
         </div>
       </div>
