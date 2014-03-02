@@ -126,16 +126,20 @@ blockquote {
 }
 
 .animate-email.ng-enter,
-.animate-email.ng-leave {
-  -webkit-transition:0.5s linear all;
-  transition:0.5s linear all;
+.animate-email.ng-leave,
+.animate-email.ng-move {
+  -webkit-transition:0.3s ease all;
+  transition:0.3s ease all;
+  position: relative;
+  width: 100%;
 }
-
 .animate-email.ng-enter,
 .animate-email.ng-leave.ng-leave-active {
-  opacity:0;
+  left: -300px;
+  opacity: 0;
 }
 .animate-email.ng-leave,
 .animate-email.ng-enter.ng-enter-active {
-  opacity:1;
+  left: 0;
+  opacity: 1;
 }

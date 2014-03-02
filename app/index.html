@@ -38,15 +38,6 @@
   </div>
 
     <div ng-controller="contentController" class="content">
-      <div ng-init="checked=true">
-          <label>
-            <input type="checkbox" ng-model="checked" style="float:left; margin-right:10px;"> Is Visible...
-          </label>
-          <div class="check-element sample-show-hide" ng-show="checked" style="clear:both;">
-            Visible...
-          </div>
-        </div>
-
       <div 
           class="animate-email"
           ng-repeat="email in emails | filter:{open:true} | filter:tagFilter | orderBy:'-position'">
