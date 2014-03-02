@@ -12,7 +12,7 @@
   <div ng-controller="sidebarController" class="sidebar">
 
     <h3 class="sidebar-title">Filter by Tag</h3>
-    <div class="ng-hide" ng-controller="filterController">
+    <div ng-controller="filterController">
         <table class="tag-table">
             <tr ng-repeat="tag in tags | orderBy:'-count'"
                 ng-click="toggleTag(tag)"
