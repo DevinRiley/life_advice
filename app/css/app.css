@@ -115,12 +115,8 @@ blockquote {
   padding: 20px;
   position: relative;
   margin-top: 5px;
-  -webkit-animation: slidin 5s;
 }
 
-@-webkit-keyframes slidein {
-  0% { margin-left: 1000%; }
-  100% { margin-left: 0%; }
 .content-body {
     white-space: pre-wrap;
 }
@@ -129,8 +125,17 @@ blockquote {
   margin-top: 30px;
 }
 
-@keyframes slidein {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+.animate-email.ng-enter,
+.animate-email.ng-leave {
+  -webkit-transition:0.5s linear all;
+  transition:0.5s linear all;
 }
 
+.animate-email.ng-enter,
+.animate-email.ng-leave.ng-leave-active {
+  opacity:0;
+}
+.animate-email.ng-leave,
+.animate-email.ng-enter.ng-enter-active {
+  opacity:1;
+}
