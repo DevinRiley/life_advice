@@ -5,6 +5,8 @@
 angular.module('app.controllers', []).
   controller('appController', [ '$scope', function($scope) {
     $scope.emails = window.data;
+    $scope.slides = {};
+    $scope.slides.done = false;
 
     // for calculating an intersection of arrays, makes easier to compage tags
     $scope.intersect = function (a, b) {
@@ -91,6 +93,21 @@ angular.module('app.controllers', []).
         return ( $scope.selectedTagNames.indexOf(tagname) > -1)
     }
 }])
+  .controller('slidesController', [ '$scope', function($scope) {
+    $scope.currentSlide = 1; // initialize current slide to first
+
+    $scope.incrementSlide = function() {
+      $scope.currentSlide++;
+      if ($scope.currentSlide == 4) {
+        $scope.slides.done = true;
+      }
+    }
+
+    $scope.showSlide = function(slideNumber) {
+      return slideNumber == $scope.currentSlide;
+    }
+    
+  }])
   .controller('sidebarController', [ '$scope', function($scope) {
     $scope.openPosition = 0;
     $scope.incrementPosition = function() {

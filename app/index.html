@@ -2,68 +2,92 @@
 <html lang="en" ng-app="app">
 <head>
   <meta charset="utf-8">
-  <title>My AngularJS App</title>
+  <title>Life With Meaning</title>
   <!-- bootswatch superhero theme -->
   <link rel="stylesheet" href="css/bootstrap.min.css"/>
   <link rel="stylesheet" href="css/app.css"/>
 </head>
 <body ng-controller="appController">
 
-  <div ng-controller="sidebarController" class="sidebar">
-
-    <h3 class="sidebar-title">Filter by Tag</h3>
-    <div ng-controller="filterController">
-        <table class="tag-table">
-            <tr ng-repeat="tag in tags | orderBy:'-count'"
-                ng-click="toggleTag(tag)"
-                ng-class="{ highlight: tag.selected }"
-                class="clickable">
-                <td class="tag-name">{{ tag.name }}</td>
-                <td class="tag-count">{{ tag.count }}</td>
-            </tr>
-        </table>
+  <div ng-controller="slidesController">
+    <div ng-show="showSlide(1)" class="slide slide1 animate-slide">
+      <h2>Slide {{ currentSlide }}</h2>
+      <h3>This is slide content</h3>
+      <p>And this is a delicious litle slide paragraph</p>
+      <span ng-click="incrementSlide()">Next Slide</span>
     </div>
-
-    <h3 class="sidebar-title">Emails</h3>
-    <div ng-repeat="email in emails | filter:tagFilter">
-        <div ng-controller="emailShortController">
-            <span ng-click="toggleEmail()"
-                  class="sidebar-subject clickable"
-                  ng-class="{ highlight: email.open }">
-                {{ email.title }}
-            </span>
-        </div>
+    <div ng-show="showSlide(2)" class="slide slide2 animate-slide">
+      <h2>Slide {{ currentSlide }}</h2>
+      <h3>This is slide content</h3>
+      <p>And this is a delicious litle slide paragraph</p>
+      <span ng-click="incrementSlide()">Next Slide</span>
+    </div>
+    <div ng-show="showSlide(3)" class="slide slide3 animate-slide">
+      <h2>Slide {{ currentSlide }}</h2>
+      <h3>This is slide content</h3>
+      <p>And this is a delicious litle slide paragraph</p>
+      <span ng-click="incrementSlide()">Next Slide</span>
     </div>
 
   </div>
+  
+  <div class="non-slide-content" ng-show="slides.done">
+    <div ng-controller="sidebarController" class="sidebar">
 
-    <div ng-controller="contentController" class="content">
-      <div 
-          class="animate-email"
-          ng-repeat="email in emails | filter:{open:true} | filter:tagFilter | orderBy:'-position'">
-        <div class="content-email" ng-controller="emailFullController">
-          <span class="content-close clickable" ng-click="closeEmail()"> Close </span>
-          <h3 ng-click="closeEmail()" class="content-title clickable highlight"> {{ email.title }}</h1>
-          <span class="content-tag"
-                ng-repeat="tag in email.tags"
-                ng-class="{ highlight: inSelectedTagNames(tag) }">
-            {{ tag }}
-          </span>
-          <div class="row">
-            <div class="col-sm-8">
-              <div class="content-body">{{email.message}}</div>
-            </div>
-            <div class="col-sm-4">
-              <div ng-show="email.pullQuote" class="pull-quote">
-                <blockquote>{{ email.quote }}</blockquote>
+      <h3 class="sidebar-title">Filter by Tag</h3>
+      <div ng-controller="filterController">
+          <table class="tag-table">
+              <tr ng-repeat="tag in tags | orderBy:'-count'"
+                  ng-click="toggleTag(tag)"
+                  ng-class="{ highlight: tag.selected }"
+                  class="clickable">
+                  <td class="tag-name">{{ tag.name }}</td>
+                  <td class="tag-count">{{ tag.count }}</td>
+              </tr>
+          </table>
+      </div>
+
+      <h3 class="sidebar-title">Emails</h3>
+      <div ng-repeat="email in emails | filter:tagFilter">
+          <div ng-controller="emailShortController">
+              <span ng-click="toggleEmail()"
+                    class="sidebar-subject clickable"
+                    ng-class="{ highlight: email.open }">
+                  {{ email.title }}
+              </span>
+          </div>
+      </div>
+
+    </div>
+
+      <div ng-controller="contentController" class="content">
+        <div 
+            class="animate-email"
+            ng-repeat="email in emails | filter:{open:true} | filter:tagFilter | orderBy:'-position'">
+          <div class="content-email" ng-controller="emailFullController">
+            <span class="content-close clickable" ng-click="closeEmail()"> Close </span>
+            <h3 ng-click="closeEmail()" class="content-title clickable highlight"> {{ email.title }}</h1>
+            <span class="content-tag"
+                  ng-repeat="tag in email.tags"
+                  ng-class="{ highlight: inSelectedTagNames(tag) }">
+              {{ tag }}
+            </span>
+            <div class="row">
+              <div class="col-sm-8">
+                <div class="content-body">{{email.message}}</div>
+              </div>
+              <div class="col-sm-4">
+                <div ng-show="email.pullQuote" class="pull-quote">
+                  <blockquote>{{ email.quote }}</blockquote>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-  </div> 
+    </div> 
+  </div>
 
 
   <!-- In production use:
