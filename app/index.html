@@ -44,7 +44,7 @@
 
         <div ng-controller="filterController">
           <h4>The answer is in: </h4>
-            <span ng-repeat="tag in tags | orderBy:'-count'"
+            <span ng-repeat="tag in tags | orderBy:'-count' | limitTo: 8"
                 ng-click="toggleRandomFromTag(tag)"
                 ng-class="{ highlight: tag.selected }"
                 class="tag-name clickable">
