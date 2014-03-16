@@ -11,22 +11,29 @@
 
   <div ng-controller="slidesController">
     <div ng-show="showSlide(1)" class="slide slide1 animate-slide">
-      <h2>Slide {{ currentSlide }}</h2>
-      <h3>This is slide content</h3>
-      <p>And this is a delicious litle slide paragraph</p>
-      <span ng-click="incrementSlide()">Next Slide</span>
+      <div class="slide-content">
+        <strong> This is a story about people </strong>
+        <p>AndAnd this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious 
+        this is a delicious litle slide paragraph</p>
+        <input auto-focus type="text" placeholder="First Name" ng-model="name"/>
+        <span ng-click="incrementSlide()">Next Slide</span>
+      </div>
     </div>
     <div ng-show="showSlide(2)" class="slide slide2 animate-slide">
-      <h2>Slide {{ currentSlide }}</h2>
-      <h3>This is slide content</h3>
-      <p>And this is a delicious litle slide paragraph</p>
-      <span ng-click="incrementSlide()">Next Slide</span>
+      <div class="slide-content">
+        <strong> This is a story about people </strong>
+        <p>AndAnd this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious 
+        this is a delicious litle slide paragraph</p>
+        <span ng-click="incrementSlide()">Next Slide</span>
+      </div>
     </div>
     <div ng-show="showSlide(3)" class="slide slide3 animate-slide">
-      <h2>Slide {{ currentSlide }}</h2>
-      <h3>This is slide content</h3>
-      <p>And this is a delicious litle slide paragraph</p>
-      <span ng-click="incrementSlide()">Next Slide</span>
+      <div class="slide-content">
+        <strong> This is a story about people </strong>
+        <p>AndAnd this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious 
+        this is a delicious litle slide paragraph</p>
+        <span ng-click="incrementSlide()">Next Slide</span>
+      </div>
     </div>
 
   </div>
@@ -100,5 +107,6 @@
   <script src="js/app.js"></script>
   <script src="js/controllers.js"></script>
   <script src="js/filters.js"></script>
+  <script src="js/directives.js"></script>
 </body>
 </html>

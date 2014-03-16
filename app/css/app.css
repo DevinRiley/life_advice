@@ -66,6 +66,44 @@
     width:50%;
 }
 
+/*------- INTRO SLIDES --------*/
+.slide {
+  background: white;
+  color: black;
+  margin-top: 10%;
+}
+
+.slide-content {
+  display: block;
+  margin: 0 auto;
+  text-align: left;
+  width: 25%;
+}
+
+.slide strong {
+  border-bottom: 1px solid black;
+  display: inline-block;
+  padding: 5px;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.slide p {
+  padding-top: 1em;
+}
+
+.slide input { 
+  border: none;
+  border-bottom: 1px solid black;
+  display: block;
+  color: gray;
+  font-style: italic;
+  outline: none;
+}
+
+.slide input:focus { 
+  color: black;
+}
 
 /*----- SIDE BAR EMAIL ------*/
 .sidebar-subject {
@@ -118,16 +156,14 @@ blockquote {
 }
 
 .content-body {
-    white-space: pre-wrap;
+  white-space: pre-wrap;
 }
 
 .pull-quote {
   margin-top: 30px;
 }
 
-.slide {
-  background: red;
-}
+
 .animate-email.ng-enter,
 .animate-email.ng-leave,
 .animate-email.ng-move {
