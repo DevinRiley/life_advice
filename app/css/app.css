@@ -177,6 +177,7 @@ blockquote {
   margin-top: 30px;
 }
 
+/* ----- ANIMATION ------ */
 
 .animate-email.ng-enter,
 .animate-email.ng-leave,
@@ -216,4 +217,17 @@ blockquote {
      *  it as hidden. */
   display:block !important;
   left: -100%;
+}
+
+.animate-non-slide {
+  -webkit-transition:2s ease all;
+  transition:2s ease all;
+  opacity: 1;
+}
+
+.animate-non-slide.ng-hide-remove {
+  display: block !important;
+}
+.animate-non-slide.ng-hide {
+  opacity: 0;
 }
