@@ -39,19 +39,22 @@
   </div>
   
   <div class="non-slide-content" ng-show="slides.done">
-    <div ng-controller="sidebarController" class="sidebar">
+    <div class="row">
+      <div ng-controller="sidebarController" class="sidebar col-sm-10 col-center">
 
-      <h3 class="sidebar-title">Filter by Tag</h3>
-      <div ng-controller="filterController">
-          <span ng-repeat="tag in tags | orderBy:'-count'"
-              ng-click="toggleTag(tag)"
-              ng-class="{ highlight: tag.selected }"
-              class="tag-name clickable">
-              {{ tag.name }}
-          </span>
+        <div ng-controller="filterController">
+          <h4>The answer is in: </h4>
+            <span ng-repeat="tag in tags | orderBy:'-count'"
+                ng-click="toggleRandomFromTag(tag)"
+                ng-class="{ highlight: tag.selected }"
+                class="tag-name clickable">
+                {{ tag.name }}
+            </span>
+        </div>
       </div>
 
-      <h3 class="sidebar-title">Emails</h3>
+<!-- Don't show this in new design, might be useful later though
+  <h3 class="sidebar-title">Emails</h3>
       <div ng-repeat="email in emails | filter:tagFilter">
           <div ng-controller="emailShortController">
               <span ng-click="toggleEmail()"
@@ -61,33 +64,37 @@
               </span>
           </div>
       </div>
-    </div>
+-->
 
-      <div ng-controller="contentController" class="content">
-        <div 
-            class="animate-email"
-            ng-repeat="email in emails | filter:{open:true} | filter:tagFilter | orderBy:'-position'">
-          <div class="content-email" ng-controller="emailFullController">
-            <span class="content-close clickable" ng-click="closeEmail()"> Close </span>
-            <h3 ng-click="closeEmail()" class="content-title clickable highlight"> {{ email.title }}</h1>
-            <span class="content-tag"
-                  ng-repeat="tag in email.tags"
-                  ng-class="{ highlight: inSelectedTagNames(tag) }">
-              {{ tag }}
-            </span>
-            <div class="row">
-              <div class="col-sm-8">
-                <div class="content-body">{{email.message}}</div>
-              </div>
-              <div class="col-sm-4">
-                <div ng-show="email.pullQuote" class="pull-quote">
-                  <blockquote>{{ email.quote }}</blockquote>
+  </div>
+
+      <div class="row">
+        <div ng-controller="contentController" class="content col-sm-10 col-center">
+          <div class="animate-email" ng-repeat="email in emails | filter: {open: true} | filter:tagFilter | orderBy:'-position'">
+            <div class="content-email" ng-controller="emailFullController">
+              <span class="content-close clickable" ng-click="closeEmail()"> Close </span>
+              <h3 class="content-title"> {{ email.title }}</h1>
+              <span class="content-tag"
+                    ng-repeat="tag in email.tags"
+                    ng-class="{ highlight: inSelectedTagNames(tag) }">
+                {{ tag }}
+              </span>
+              <div class="row">
+                <div class="col-sm-10">
+                  <div class="content-body">{{email.message}}</div>
+                </div>
+                <div class="col-sm-2">
+                  <div ng-show="email.pullQuote" class="pull-quote">
+                    <blockquote>{{ email.quote }}</blockquote>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <!-- END contentController -->
       </div>
+
 
     </div> 
   </div>

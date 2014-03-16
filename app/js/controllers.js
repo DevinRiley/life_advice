@@ -8,20 +8,39 @@ angular.module('app.controllers', []).
     $scope.slides = {};
     $scope.slides.done = false;
 
+    // Ugh, should replace this with an array of opened emails
+    // and we just update it when we open/close stuff
+    $scope.unopenedEmails = function() {
+      var unopened = [];
+      $scope.emails.forEach(function(email){
+        if(email.open === false) {
+          unopened.push(email)
+        }
+      });
+      return unopened;
+    }
+
+    // for getting a random email
+    // TODO: Update so you only pick from unopened emails
+    $scope.randomEmail = function() {
+        var unopened = $scope.unopenedEmails();
+        var max = unopened.length - 1;
+        var min = 0;
+        // scales and converts float
+        var index = Math.floor(Math.random() * (max - min + 1)) + min;
+        return unopened[index]
+    }
+    
     // for calculating an intersection of arrays, makes easier to compage tags
     $scope.intersect = function (a, b) {
-        var ai=0, bi=0;
         var result = new Array();
-        while( ai < a.length && bi < b.length )
-        {
-            if      (a[ai] < b[bi] ){ ai++; }
-            else if (a[ai] > b[bi] ){ bi++; }
-            else /* they're equal */
-            {
-                result.push(a[ai]);
-                ai++;
-                bi++;
+        
+        for(var ai = 0; ai < a.length; ai++) {
+          for(var bi = 0; bi < b.length; bi++) {
+            if (a[ai] === b[bi]) {
+              result.push(a[ai]);
             }
+          }
         }
         return result;
     }
@@ -84,13 +103,21 @@ angular.module('app.controllers', []).
         if($scope.selectedTagNames.length == 0){
             return true
         } else {
-            console.log( $scope.intersect(email.tags, $scope.selectedTagNames).length > 0 )
-            return ( $scope.intersect(email.tags, $scope.selectedTagNames).length > 0)
+            return $scope.intersect(email.tags, $scope.selectedTagNames).length > 0 
         }
     }
 
     $scope.inSelectedTagNames = function(tagname){
         return ( $scope.selectedTagNames.indexOf(tagname) > -1)
+    }
+
+
+    $scope.toggleRandomFromTag = function(tag) {
+      $scope.toggleTag(tag);
+      $scope.randomEmail().open = true;
+      if ($scope.inSelectedTagNames(tag.name)) {
+      }
+
     }
 }])
   .controller('slidesController', [ '$scope', function($scope) {
@@ -167,4 +194,5 @@ angular.module('app.controllers', []).
             return email.message
      }
 
-  }]);
+  }])
+

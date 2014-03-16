@@ -36,33 +36,33 @@ body {
 
 .highlight {
   font-weight: bold;
-  color: #F69300;
 }
 
 .sidebar {
-    width: 75%;
     margin: 0 auto;
+}
 
+.col-center {
+  float: none;
+  margin: 0 auto;
 }
 
 .content {
-  float: right;
-  width: 70%;
-    margin-right:20px;
+  color: black;
 }
 
 /*----- General styles ------*/
 
 .clickable:hover {
     cursor: pointer;
-    color: #FFAF00;
+    text-decoration: underline;
 }
 
 /*----- SIDE BAR Tags------*/
 .tag-name {
   display: inline-block;
   font-style: italic;
-  padding: 12px;
+  padding: 0 15px 15px 0;
 }
 
 .tag-name.highlight {
@@ -137,6 +137,7 @@ body {
 }
 
 .content-tag {
+    color: black;
     font-size: 0.8em;
     margin-right: 10px;
 }
@@ -144,7 +145,6 @@ body {
 .content-body {
     margin-top:10px;
     margin-bottom:80px;
-    max-width: 600px;
 }
 
 .content-title {
@@ -161,11 +161,10 @@ blockquote {
 }
 
 .content-email {
-  background: #FFFFF7;
+  background: white;
   border-radius: 3px;
-  border: 2px solid #5bc0de;
+  border-bottom: 1px solid grey;
   color: black;
-  padding: 20px;
   position: relative;
   margin-top: 5px;
 }
@@ -182,20 +181,18 @@ blockquote {
 .animate-email.ng-enter,
 .animate-email.ng-leave,
 .animate-email.ng-move {
-  -webkit-transition:0.3s ease all;
-  transition:0.3s ease all;
+  -webkit-transition:0.1s ease all;
+  transition:0.2s linear all;
   position: relative;
   width: 100%;
 }
 .animate-email.ng-enter,
 .animate-email.ng-leave.ng-leave-active {
-  left: -300px;
-  opacity: 0;
+  left: -100%;
 }
 .animate-email.ng-leave,
 .animate-email.ng-enter.ng-enter-active {
   left: 0;
-  opacity: 1;
 }
 
 .animate-slide {

@@ -10,7 +10,7 @@ window.data =[
         "title": null,
         "quote": null,
         "position": 0,
-        "open": false
+        "open": true
     },
     {
         "subject": "no_subject",
@@ -23,7 +23,7 @@ window.data =[
         "title": null,
         "quote": null,
         "position": 1,
-        "open": false
+        "open": true
     },
     {
         "subject": "Don't think on it too hard.",
@@ -36,7 +36,7 @@ window.data =[
         "title": null,
         "quote": null,
         "position": 2,
-        "open": false
+        "open": true
     },
     {
         "subject": "Fwd: [The Listserve] Life without meaning",
@@ -50,7 +50,7 @@ window.data =[
         "title": null,
         "quote": "try to keep a broader view of what long term impact means",
         "position": 3,
-        "open": false
+        "open": true
     },
     {
         "subject": "Re: [The Listserve] Life without meaning",
@@ -63,7 +63,7 @@ window.data =[
         "title": null,
         "quote": null,
         "position": 4,
-        "open": false
+        "open": true
     },
     {
         "subject": "no_subject",
@@ -77,7 +77,7 @@ window.data =[
         "title": null,
         "quote": "be a curator of the answers",
         "position": 5,
-        "open": false
+        "open": true
     },
     {
         "subject": "37",
@@ -91,7 +91,7 @@ window.data =[
         "title": null,
         "quote": "Kundalini Yoga",
         "position": 6,
-        "open": false
+        "open": true
     },
     {
         "subject": "no_subject",
@@ -106,7 +106,7 @@ window.data =[
         "title": null,
         "quote": "breed offspring",
         "position": 7,
-        "open": false
+        "open": true
     },
     {
         "subject": "I agree",
@@ -123,7 +123,7 @@ window.data =[
         "title": null,
         "quote": "We can now see life undiluted",
         "position": 8,
-        "open": false
+        "open": true
     },
     {
         "subject": "Re: [The Listserve] Life without meaning",
@@ -137,7 +137,7 @@ window.data =[
         "title": null,
         "quote": "small actions",
         "position": 9,
-        "open": false
+        "open": true
     },
     {
         "subject": "Re: [The Listserve] Life without meaning",
@@ -151,7 +151,7 @@ window.data =[
         "title": null,
         "quote": "love is the beauty of the Soul",
         "position": 10,
-        "open": false
+        "open": true
     },
     {
         "subject": "the key",
@@ -168,7 +168,7 @@ window.data =[
         "title": null,
         "quote": "curiosity is what keeps us going",
         "position": 11,
-        "open": false
+        "open": true
     },
     {
         "subject": "Listserve response",
@@ -183,7 +183,7 @@ window.data =[
         "title": null,
         "quote": "recommend you look into computer programming",
         "position": 12,
-        "open": false
+        "open": true
     },
     {
         "subject": "Listserv response",
@@ -198,7 +198,7 @@ window.data =[
         "title": null,
         "quote": "I'm ready",
         "position": 13,
-        "open": false
+        "open": true
     },
     {
         "subject": "Re: [The Listserve] Life without meaning",
@@ -212,7 +212,7 @@ window.data =[
         "title": null,
         "quote": "When's the last time you felt meaning?",
         "position": 14,
-        "open": false
+        "open": true
     },
     {
         "subject": "Your Quest for Answers",
@@ -227,7 +227,7 @@ window.data =[
         "title": null,
         "quote": "Peace Corps",
         "position": 15,
-        "open": false
+        "open": true
     },
     {
         "subject": "Re: [The Listserve] Life without meaning",
@@ -240,7 +240,7 @@ window.data =[
         "title": null,
         "quote": "Thank you for putting it into words",
         "position": 16,
-        "open": false
+        "open": true
     },
     {
         "subject": "listserv message",
@@ -258,7 +258,7 @@ window.data =[
         "title": null,
         "quote": "I know exactly how you feel",
         "position": 17,
-        "open": false
+        "open": true
     },
     {
         "subject": "ListServe",
@@ -272,7 +272,7 @@ window.data =[
         "title": null,
         "quote": "try to get in touch with your love of the process",
         "position": 18,
-        "open": false
+        "open": true
     },
     {
         "subject": "your listserv post",
@@ -287,7 +287,7 @@ window.data =[
         "title": null,
         "quote": "It's not a terrible outlook at all",
         "position": 19,
-        "open": false
+        "open": true
     },
     {
         "subject": "Listserve",
@@ -304,7 +304,7 @@ window.data =[
         "title": null,
         "quote": " I'll be the relative they're most proud of having",
         "position": 20,
-        "open": false
+        "open": true
     },
     {
         "subject": "Re: [The Listserve] Life without meaning",
@@ -320,7 +320,7 @@ window.data =[
         "title": null,
         "quote": "two easy approaches",
         "position": 21,
-        "open": false
+        "open": true
     },
     {
         "subject": "Re: [The Listserve] Life without meaning",
@@ -337,7 +337,7 @@ window.data =[
         "title": null,
         "quote": "some books that may be of use/interest",
         "position": 22,
-        "open": false
+        "open": true
     },
     {
         "subject": "Re: [The Listserve] Life without meaning",
@@ -350,7 +350,7 @@ window.data =[
         "title": null,
         "quote": "helping people",
         "position": 23,
-        "open": false
+        "open": true
     },
     {
         "subject": "Re: [The Listserve] Life without meaning",
@@ -364,7 +364,7 @@ window.data =[
         "title": null,
         "quote": "solace and techniques",
         "position": 24,
-        "open": false
+        "open": true
     },
     {
         "subject": "You are not old",
@@ -378,7 +378,7 @@ window.data =[
         "title": null,
         "quote": null,
         "position": 25,
-        "open": false
+        "open": true
     },
     {
         "subject": "Re: [The Listserve] Life without meaning",
@@ -397,7 +397,7 @@ window.data =[
         "title": null,
         "quote": "Just try to do new things everyday",
         "position": 26,
-        "open": false
+        "open": true
     },
     {
         "subject": "Listserve - 20 years old reaction",
@@ -410,7 +410,7 @@ window.data =[
         "title": null,
         "quote": "it's just the way it goes.",
         "position": 27,
-        "open": false
+        "open": true
     },
     {
         "subject": "Abyss",
@@ -425,7 +425,7 @@ window.data =[
         "title": null,
         "quote": "the abyss",
         "position": 28,
-        "open": false
+        "open": true
     },
     {
         "subject": "It's all about Perspective",
@@ -440,7 +440,7 @@ window.data =[
         "title": null,
         "quote": "Be the best you you can be",
         "position": 29,
-        "open": false
+        "open": true
     },
     {
         "subject": "A thought from Canada :)",
@@ -454,7 +454,7 @@ window.data =[
         "title": null,
         "quote": "expresses that discontent acoustically",
         "position": 30,
-        "open": false
+        "open": true
     },
     {
         "subject": "Tea?",
@@ -474,7 +474,7 @@ window.data =[
         "title": null,
         "quote": "lost in self identity and image",
         "position": 31,
-        "open": false
+        "open": true
     },
     {
         "subject": "answer",
@@ -486,7 +486,7 @@ window.data =[
         "title": "Who do you hurt for?\n\n",
         "quote": "Find a way to volunteer your time\n",
         "position": 34,
-        "open": false
+        "open": true
     },
     {
         "subject": "...",
@@ -498,7 +498,7 @@ window.data =[
         "title": "Wow\n",
         "quote": " I don't seem to have interest in anything at all. ",
         "position": 35,
-        "open": false
+        "open": true
     },
     {
         "subject": "Listserve",
@@ -510,7 +510,7 @@ window.data =[
         "title": "Everything",
         "quote": null,
         "position": 36,
-        "open": false
+        "open": true
     },
     {
         "subject": "Re: [The Listserve] Life without meaning",
@@ -524,7 +524,7 @@ window.data =[
         "title": "Alas, my math skills",
         "quote": "Religion doesn't pay the bills\n\nyou know.",
         "position": 37,
-        "open": false
+        "open": true
     },
     {
         "subject": "Re: [The Listserve] Life without meaning",
@@ -536,7 +536,7 @@ window.data =[
         "title": "Consider tutoring",
         "quote": "suffering and joy are real",
         "position": 38,
-        "open": false
+        "open": true
     },
     {
         "subject": "Life Without Meaning",
@@ -548,7 +548,7 @@ window.data =[
         "title": "professional wrestler Dwayne Johnson",
         "quote": "How many Madame Curies are there?",
         "position": 39,
-        "open": false
+        "open": true
     },
     {
         "subject": "Re: [The Listserve] Life without meaning",
@@ -562,7 +562,7 @@ window.data =[
         "title": "Superheroes",
         "quote": "write novels and help people",
         "position": 40,
-        "open": false
+        "open": true
     },
     {
         "subject": "\"Something Different, Perhaps\"",
@@ -577,7 +577,7 @@ window.data =[
         "title": "myself and every other wet machin",
         "quote": "Nothing you do here matters once you wake.",
         "position": 41,
-        "open": false
+        "open": true
     },
     {
         "subject": "Life without meaning",
@@ -591,7 +591,7 @@ window.data =[
         "title": "Why do it?\n",
         "quote": "Nobody will likely remember you or your contribution",
         "position": 42,
-        "open": false
+        "open": true
     },
     {
         "subject": "Meaning and meaninglessness",
@@ -604,7 +604,7 @@ window.data =[
         "title": "a very comfortable environment",
         "quote": "I also believe the human/energetic landscape we live in is much more fascinating complex ",
         "position": 43,
-        "open": false
+        "open": true
     },
     {
         "subject": "FW: [The Listserve] Life without meaning",
@@ -617,7 +617,7 @@ window.data =[
         "title": "you need a new dream",
         "quote": "maybe you can watch the Film: someone flew over the cuckoo's nest",
         "position": 44,
-        "open": false
+        "open": true
     },
     {
         "subject": "it's not about you",
@@ -629,7 +629,7 @@ window.data =[
         "title": "Repeated disappointment",
         "quote": "I'm blessed to remain in that state of grace.",
         "position": 45,
-        "open": false
+        "open": true
     },
     {
         "subject": "Fwd: [The Listserve] Life without meaning",
@@ -641,7 +641,7 @@ window.data =[
         "title": "Reap the benefits of friendship",
         "quote": " Try to enjoy the roller-coaster of emotions",
         "position": 47,
-        "open": false
+        "open": true
     },
     {
         "subject": "meaning of life",
@@ -653,7 +653,7 @@ window.data =[
         "title": "A passions worth pursuing",
         "quote": "You have lived enough to see through some of the illusions you dreamed up",
         "position": 48,
-        "open": false
+        "open": true
     },
     {
         "subject": "Re: [The Listserve] Life without meaning",
@@ -665,6 +665,6 @@ window.data =[
         "title": "Is it ephemeral?",
         "quote": "that lack of permanence has never dissuaded me",
         "position": 49,
-        "open": false
+        "open": true
     }
 ]
