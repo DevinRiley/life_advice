@@ -1,5 +1,10 @@
 /* app css stylesheet */
 
+body {
+  background: white;
+  color: black;
+}
+
 .menu {
   list-style: none;
   border-bottom: 0.1em solid black;
@@ -30,13 +35,13 @@
 }
 
 .highlight {
+  font-weight: bold;
   color: #F69300;
 }
 
 .sidebar {
-    float: left;
-    width: 25%;
-    margin:10px;
+    width: 75%;
+    margin: 0 auto;
 
 }
 
@@ -55,9 +60,14 @@
 
 /*----- SIDE BAR Tags------*/
 .tag-name {
-  padding: 3px;
+  display: inline-block;
+  font-style: italic;
+  padding: 12px;
 }
 
+.tag-name.highlight {
+  font-style: normal;
+}
 .tag-count {
   padding: 3px
 }
@@ -78,6 +88,11 @@
   margin: 0 auto;
   text-align: left;
   width: 25%;
+}
+
+.next-slide {
+  left: 75%;
+  position: relative;
 }
 
 .slide strong {
@@ -184,8 +199,8 @@ blockquote {
 }
 
 .animate-slide {
-  -webkit-transition:0.1s ease all;
-  transition:0.1s ease all;
+  -webkit-transition:0.2s ease all;
+  transition:0.2s ease all;
   position: relative;
   width: 100%;
   left: 0;

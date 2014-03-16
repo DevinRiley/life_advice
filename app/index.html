@@ -9,31 +9,31 @@
 </head>
 <body ng-controller="appController">
 
-  <div ng-controller="slidesController">
+  <div ng-hide="slides.done" ng-controller="slidesController">
     <div ng-show="showSlide(1)" class="slide slide1 animate-slide">
       <div class="slide-content">
         <strong> This is a story about people </strong>
         <p>AndAnd this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious 
         this is a delicious litle slide paragraph</p>
-        <input auto-focus type="text" placeholder="First Name" ng-model="name"/>
-        <span ng-click="incrementSlide()">Next Slide</span>
+        <input auto-focus enter-key type="text" placeholder="First Name" ng-model="name"/>
       </div>
+      <span class="next-slide clickable" ng-click="incrementSlide()">Next</span>
     </div>
     <div ng-show="showSlide(2)" class="slide slide2 animate-slide">
       <div class="slide-content">
-        <strong> This is a story about people </strong>
+        <strong>The Original Letter</strong>
         <p>AndAnd this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious 
         this is a delicious litle slide paragraph</p>
-        <span ng-click="incrementSlide()">Next Slide</span>
       </div>
+      <span class="next-slide clickable" ng-click="incrementSlide()">Next</span>
     </div>
     <div ng-show="showSlide(3)" class="slide slide3 animate-slide">
       <div class="slide-content">
         <strong> This is a story about people </strong>
         <p>AndAnd this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious 
         this is a delicious litle slide paragraph</p>
-        <span ng-click="incrementSlide()">Next Slide</span>
       </div>
+      <span class="next-slide clickable" ng-click="incrementSlide()">Next</span>
     </div>
 
   </div>
@@ -43,15 +43,12 @@
 
       <h3 class="sidebar-title">Filter by Tag</h3>
       <div ng-controller="filterController">
-          <table class="tag-table">
-              <tr ng-repeat="tag in tags | orderBy:'-count'"
-                  ng-click="toggleTag(tag)"
-                  ng-class="{ highlight: tag.selected }"
-                  class="clickable">
-                  <td class="tag-name">{{ tag.name }}</td>
-                  <td class="tag-count">{{ tag.count }}</td>
-              </tr>
-          </table>
+          <span ng-repeat="tag in tags | orderBy:'-count'"
+              ng-click="toggleTag(tag)"
+              ng-class="{ highlight: tag.selected }"
+              class="tag-name clickable">
+              {{ tag.name }}
+          </span>
       </div>
 
       <h3 class="sidebar-title">Emails</h3>
@@ -64,7 +61,6 @@
               </span>
           </div>
       </div>
-
     </div>
 
       <div ng-controller="contentController" class="content">

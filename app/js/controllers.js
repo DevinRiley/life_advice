@@ -26,7 +26,7 @@ angular.module('app.controllers', []).
         return result;
     }
 
-    // tags is needed in the sidebar anf the main content, so setting up here
+    // tags is needed in the sidebar and the main content, so setting up here
     $scope.createTags = function() {
         $scope.tags = []; //the tag object we care about and used in UI
         var tagCount = {}; //helper hash!
@@ -84,8 +84,8 @@ angular.module('app.controllers', []).
         if($scope.selectedTagNames.length == 0){
             return true
         } else {
-            console.log($scope.intersect($scope.selectedTagNames,email.tags))
-            return ( $scope.intersect($scope.selectedTagNames,email.tags).length > 0)
+            console.log( $scope.intersect(email.tags, $scope.selectedTagNames).length > 0 )
+            return ( $scope.intersect(email.tags, $scope.selectedTagNames).length > 0)
         }
     }
 
@@ -156,7 +156,6 @@ angular.module('app.controllers', []).
      // inheritance, but need to look up
   
      $scope.showPullQuote = function() {
-       console.log("pullQuote");
        return $scope.email.pullQuote && $scope.email.length > 300;
      }
 
