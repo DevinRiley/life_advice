@@ -3,28 +3,31 @@
 /* Controllers */
 
 angular.module('app.controllers', []).
-  controller('appController', [ '$scope', function($scope) {
-    $scope.emails = window.data;
+  controller('appController', [ '$scope', 'Emails', function($scope, Emails) {
+    $scope.emails = Emails.emails;
+    $scope.slides = {};
+    $scope.slides.done = true;
 
+    // pass-through methods from Emails Service
+    $scope.randomEmail = Emails.random;
+    $scope.closeAll    = Emails.closeAll;
+
+    
     // for calculating an intersection of arrays, makes easier to compage tags
     $scope.intersect = function (a, b) {
-        var ai=0, bi=0;
         var result = new Array();
-        while( ai < a.length && bi < b.length )
-        {
-            if      (a[ai] < b[bi] ){ ai++; }
-            else if (a[ai] > b[bi] ){ bi++; }
-            else /* they're equal */
-            {
-                result.push(a[ai]);
-                ai++;
-                bi++;
+        
+        for(var ai = 0; ai < a.length; ai++) {
+          for(var bi = 0; bi < b.length; bi++) {
+            if (a[ai] === b[bi]) {
+              result.push(a[ai]);
             }
+          }
         }
         return result;
     }
 
-    // tags is needed in the sidebar anf the main content, so setting up here
+    // tags is needed in the sidebar and the main content, so setting up here
     $scope.createTags = function() {
         $scope.tags = []; //the tag object we care about and used in UI
         var tagCount = {}; //helper hash!
@@ -52,12 +55,8 @@ angular.module('app.controllers', []).
         });
     };
     $scope.createTags(); //invoke immediately
-
-    // selectedTagNames an array of tag names, makes easier to work with email[0].tags
-    // which are also an array of strings. $scope.tags is an array of objects
-    $scope.selectedTagNames = [];
+    $scope.selectedTagName = null;
     $scope.toggleTag = function(tag){
-
         // this is kinda ugh, but wanna let people pass in a string or an object, so
         // easy to call from anywhere
         if ( typeof tag === 'string') {
@@ -65,32 +64,64 @@ angular.module('app.controllers', []).
                 if( tagFromList.name == tag ) {
                     tag = tagFromList;
                 }
+                if(tagFromList != tag) {
+                  // reset any currently selected tags
+                  tagFromList.selected = false;
+                }
             });
         }
 
-        var tagIndex = $scope.selectedTagNames.indexOf(tag.name)
-        if( tagIndex == -1 ){
-            $scope.selectedTagNames.push(tag.name)
+        if ($scope.selectedTagName === tag.name) {
+          $scope.selectedTagName = null;
         } else {
-            $scope.selectedTagNames.splice(tagIndex, 1)
+          $scope.selectedTagName = tag.name;
         }
         tag.selected = !tag.selected;
     }
 
-    //used in sidebar and content
-    $scope.tagFilter = function(email){
-        if($scope.selectedTagNames.length == 0){
-            return true
-        } else {
-            console.log($scope.intersect($scope.selectedTagNames,email.tags))
-            return ( $scope.intersect($scope.selectedTagNames,email.tags).length > 0)
-        }
+    $scope.inSelectedTagNames = function(tagname){
+        return ( $scope.selectedTagName == tagname)
     }
 
-    $scope.inSelectedTagNames = function(tagname){
-        return ( $scope.selectedTagNames.indexOf(tagname) > -1)
+    $scope.openAllWithTag = function(tag) {
+      $scope.closeAll();
+      $scope.toggleTag(tag);
+      //open all with tag
+      $scope.emails.forEach(function(email){
+        if ($scope.intersect(email.tags, [$scope.selectedTagName]).length > 0) {
+          email.open = true;
+        }
+      });
+      $scope.emails.forEach(function(email) {
+        if (email.open === true) {
+          console.log(email); 
+        }
+      });
+    }
+
+    $scope.toggleRandomFromTag = function(tag) {
+      $scope.toggleTag(tag);
+      $scope.randomEmail().open = true;
+      if ($scope.selectedTagName === (tag.name)) {
+      }
+
     }
 }])
+  .controller('slidesController', [ '$scope', function($scope) {
+    $scope.currentSlide = 1; // initialize current slide to first
+
+    $scope.incrementSlide = function() {
+      $scope.currentSlide++;
+      if ($scope.currentSlide === 4) {
+        $scope.slides.done = true;
+      }
+    }
+
+    $scope.showSlide = function(slideNumber) {
+      return slideNumber == $scope.currentSlide;
+    }
+    
+  }])
   .controller('sidebarController', [ '$scope', function($scope) {
     $scope.openPosition = 0;
     $scope.incrementPosition = function() {
@@ -139,7 +170,6 @@ angular.module('app.controllers', []).
      // inheritance, but need to look up
   
      $scope.showPullQuote = function() {
-       console.log("pullQuote");
        return $scope.email.pullQuote && $scope.email.length > 300;
      }
 
@@ -151,4 +181,5 @@ angular.module('app.controllers', []).
             return email.message
      }
 
-  }]);
+  }])
+
