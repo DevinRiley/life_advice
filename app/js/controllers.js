@@ -20,13 +20,12 @@ angular.module('app.controllers', []).
       return unopened;
     }
 
-    // for getting a random email
-    // TODO: Update so you only pick from unopened emails
+    // for getting a random email that isn't already open
     $scope.randomEmail = function() {
         var unopened = $scope.unopenedEmails();
         var max = unopened.length - 1;
         var min = 0;
-        // scales and converts float
+        // scales and converts rand float
         var index = Math.floor(Math.random() * (max - min + 1)) + min;
         return unopened[index]
     }
@@ -43,6 +42,12 @@ angular.module('app.controllers', []).
           }
         }
         return result;
+    }
+
+    $scope.closeAll = function() {
+      $scope.emails.forEach(function(email) {
+        email.open = false;
+      });
     }
 
     // tags is needed in the sidebar and the main content, so setting up here
