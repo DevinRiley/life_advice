@@ -93,6 +93,13 @@ body {
 .next-slide {
   left: 75%;
   position: relative;
+  background:none!important;
+  border: none!important; 
+  padding:0!important;
+}
+
+.next-slide:disabled {
+  color: lightgray;
 }
 
 .slide strong {

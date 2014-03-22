@@ -31,4 +31,11 @@ angular.module('app.services', [])
           var index = Math.floor(Math.random() * (max - min + 1)) + min;
           return unopened[index]
       }
+
+      this.interpolateName = function(name) {
+         console.log(name);
+          this.emails.forEach(function(email) {
+            email.message = email.message.replace("{{ name }}", name);
+          });
+      }
   });
