@@ -6,11 +6,14 @@ angular.module('app.controllers', []).
   controller('appController', [ '$scope', 'Emails', function($scope, Emails) {
     $scope.emails = Emails.emails;
     $scope.slides = {};
-    $scope.slides.done = true;
+    $scope.slides.done = false;
 
     // pass-through methods from Emails Service
     $scope.randomEmail = Emails.random;
     $scope.closeAll    = Emails.closeAll;
+    $scope.interpolateName = function(name) {
+      Emails.interpolateName(name);
+    }
 
     $scope.tags = ['Science',
         'Religion', 'Altruism','Nihilism', 'Family',
@@ -36,7 +39,8 @@ angular.module('app.controllers', []).
         return taggedEmails
     }
 }])
-  .controller('slidesController', [ '$scope', function($scope) {
+  .controller('slidesController', [ '$scope', 'Emails', function($scope, Emails) {
+    $scope.name = null;
     $scope.currentSlide = 1; // initialize current slide to first
 
     $scope.incrementSlide = function() {

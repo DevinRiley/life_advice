@@ -35,7 +35,6 @@ body {
 }
 
 .highlight {
-  font-weight: bold;
 }
 
 .sidebar {
@@ -61,12 +60,13 @@ body {
 /*----- SIDE BAR Tags------*/
 .tag-name {
   display: inline-block;
-  font-style: italic;
+  font-weight: bold;
   padding: 0 15px 15px 0;
 }
 
 .tag-name.highlight {
   font-style: normal;
+  color: #AA0000;
 }
 .tag-count {
   padding: 3px
@@ -93,6 +93,13 @@ body {
 .next-slide {
   left: 75%;
   position: relative;
+  background:none!important;
+  border: none!important; 
+  padding:0!important;
+}
+
+.next-slide:disabled {
+  color: lightgray;
 }
 
 .slide strong {
@@ -140,6 +147,10 @@ body {
     color: black;
     font-size: 0.8em;
     margin-right: 10px;
+}
+
+.content-tag.highlight {
+  font-weight: bold;
 }
 
 .content-body {
