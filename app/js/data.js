@@ -634,7 +634,7 @@ window.data =[
     {
         "subject": "Fwd: [The Listserve] Life without meaning",
         "tags": [
-            "help"
+            "help others", "Recommended"
         ],
         "message": "\nHello {{ name }}!\n\nYou spurred some thoughts within me...\n\nTrying to impact the world at large is only possible for a select few. To largely impact someone else's world can be accomplished today.\n\nFind someone you can help, make it your top priority to effectively make a difference today in their life. Do that often as you can. Reap the benefits of friendship and slowly impact the world around you. Try to enjoy the roller-coaster of emotions that others will heave upon you as a result (both the good and bad ones). If you haven't found out yet, this life is all about relationships, not accomplishments.\n\nCheers!",
         "cleaned": true,
@@ -646,7 +646,7 @@ window.data =[
     {
         "subject": "meaning of life",
         "tags": [
-            "phase"
+            "There is No Answer", "Recommended"
         ],
         "message": "\nIn my experience, at your age, you are just beginning to find out what it is you want to do, what you enjoy, and how to live.  You have lived enough to see through some of the illusions you dreamed up as a teen and young adult.  \n\nIn my humble opinion, adulthood/growing up is simply getting to the point where you don't blame others for your actions.  Once you can do that, you can explore and try new things or just the next best thing until the next big thing comes along.  We live far longer than our predecessors did.  We have opportunities to have more than one career; to match our work with our passions if we are lucky.\n\nMusic, whether vocation or avocation, is a passion worth pursuing even if it doesn't meet the test of ages.  Music can touch a life and change it in an instant ... and in that instant, you have changed the world of someone forever.  That, to me, is a far greater gift than being remembered as a composer.  It is the hearts and lives you touch with music that creates magic.\n\nTouching, changing one person's live is an amazing gift because that one person will touch another's who will touch other's lives and the magic is passed along even if you end up in relative anonymity.\n\nAs for your education, it isn't what degree you have, it is what you do with it.  If you make your life better and those around you benefit then you have a made a lasting impression on the world.  Rejoice in that.  \n\nLove often and love well.\n\nGood luck.",
         "cleaned": true,
@@ -658,7 +658,7 @@ window.data =[
     {
         "subject": "Re: [The Listserve] Life without meaning",
         "tags": [
-            "help others"
+            "Recommended"
         ],
         "message": "\n{{ name }},\n\nInteresting email. \n\nDespite satisfaction and some degree of success in my career, {{ name }}, the thing that makes life meaningful for me is enriching the lives of the people I love (wife, family members, friends) by loving them and trying to be kind to them. By measuring the worth of your life in terms of impact on enriching that of others, you're pretty much guaranteed to feel continuously challenged and happy. Is it ephemeral? I suppose, to the degree that our lives on earth are, but that lack of permanence has never dissuaded me from focusing on this perhaps narrow way of thinking about improving the world while I'm here. \n\nInvariably, through your own actions, your impact on others, and any children you leave behind, you will have lasting impact on the world, but why dwell on that which will come after you?\n\nGood luck!",
         "cleaned": true,

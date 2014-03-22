@@ -40,43 +40,29 @@
   
   <div class="non-slide-content animate-non-slide" ng-show="slides.done">
     <div class="row">
-      <div ng-controller="sidebarController" class="sidebar col-sm-10 col-center">
-
-        <div ng-controller="filterController">
+      <div class="sidebar col-sm-10 col-center">
+        <div>
           <h4>The answer is in: </h4>
-            <span ng-repeat="tag in tags | orderBy:'-count' | limitTo: 8"
-                ng-click="openAllWithTag(tag)"
-                ng-class="{ highlight: tag.selected }"
+            <span ng-repeat="tag in tags"
+                ng-click="selectTag(tag)"
+                ng-class="{ highlight: ( isSelected(tag) ) }"
                 class="tag-name clickable">
-                {{ tag.name }}
+                {{ tag }}
             </span>
         </div>
       </div>
 
-<!-- Don't show this in new design, might be useful later though
-  <h3 class="sidebar-title">Emails</h3>
-      <div ng-repeat="email in emails | filter:tagFilter">
-          <div ng-controller="emailShortController">
-              <span ng-click="toggleEmail()"
-                    class="sidebar-subject clickable"
-                    ng-class="{ highlight: email.open }">
-                  {{ email.title }}
-              </span>
-          </div>
-      </div>
--->
-
   </div>
 
       <div class="row">
-        <div ng-controller="contentController" class="content col-sm-10 col-center">
-          <div class="animate-email" ng-repeat="email in emails | filter: {open: true} | orderBy:'-position'">
-            <div class="content-email" ng-controller="emailFullController">
-              <span class="content-close clickable" ng-click="closeEmail()"> Close </span>
-              <h3 class="content-title"> {{ email.title }}</h1>
+        <div class="content col-sm-10 col-center">
+          <div class="animate-email" ng-repeat="email in emailsByTag()">
+            <div class="content-email">
+              <span class="content-close clickable"> Close </span>
+              <h3 class="content-title"> {{ email.title }}</h3>
               <span class="content-tag"
                     ng-repeat="tag in email.tags"
-                    ng-class="{ highlight: inSelectedTagNames(tag) }">
+                    ng-class="{ highlight: ( isSelected(tag) ) }">
                 {{ tag }}
               </span>
               <div class="row">

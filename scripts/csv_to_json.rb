@@ -22,7 +22,6 @@ data.each_with_index do |email, i|
   end
 
   email['position'] = i
-  email['open'] = false
   if email['tags']
     email['cleaned'] = true
     final << email

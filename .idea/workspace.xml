@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd6b371e-e54e-493f-8387-227fc2c83b71" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lib/angular-animate.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/app.js" afterPath="$PROJECT_DIR$/app/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/controllers.js" afterPath="$PROJECT_DIR$/app/js/controllers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/csv_to_json.rb" afterPath="$PROJECT_DIR$/scripts/csv_to_json.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/data.js" afterPath="$PROJECT_DIR$/app/js/data.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="life_advice.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,19 +29,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="111" column="12" selection-start="4890" selection-end="4890" vertical-scroll-proportion="-16.321428" vertical-offset="1652" max-vertical-offset="2337">
+            <state line="47" column="56" selection-start="2580" selection-end="2580" vertical-scroll-proportion="1.415214" vertical-offset="0" max-vertical-offset="2071">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/js/app.js">
+      <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="227" selection-end="227" vertical-scroll-proportion="0.32664755" vertical-offset="0" max-vertical-offset="698">
+            <state line="24" column="23" selection-start="665" selection-end="677" vertical-scroll-proportion="-9.5" vertical-offset="209" max-vertical-offset="1102">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="data.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/js/data.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="636" column="13" selection-start="47199" selection-end="47210" vertical-scroll-proportion="0.0" vertical-offset="12159" max-vertical-offset="12844">
               <folding />
             </state>
           </provider>
@@ -68,13 +78,13 @@
         <option value="$PROJECT_DIR$/scripts/emails.csv" />
         <option value="$PROJECT_DIR$/scripts/emails.json" />
         <option value="$PROJECT_DIR$/app/css/app.css" />
-        <option value="$PROJECT_DIR$/scripts/csv_to_json.rb" />
-        <option value="$PROJECT_DIR$/app/js/data.js" />
-        <option value="$PROJECT_DIR$/app/js/controllers.js" />
         <option value="$PROJECT_DIR$/app/lib/angular-ui-router.js" />
         <option value="$PROJECT_DIR$/app/lib/angular-animate.min.js" />
-        <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/app/js/app.js" />
+        <option value="$PROJECT_DIR$/scripts/csv_to_json.rb" />
+        <option value="$PROJECT_DIR$/app/js/controllers.js" />
+        <option value="$PROJECT_DIR$/app/index.html" />
+        <option value="$PROJECT_DIR$/app/js/data.js" />
       </list>
     </option>
   </component>
@@ -171,6 +181,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="life_advice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="life_advice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -365,35 +393,6 @@
         <state line="31" column="0" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="19" selection-end="19" vertical-scroll-proportion="0.08166189" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/emails_back.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/emails.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="43" selection-start="43" selection-end="43" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/emails.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="1" selection-start="0" selection-end="48260" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="12825">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/csv_to_json.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="22" selection-start="523" selection-end="523" vertical-scroll-proportion="0.8023774" vertical-offset="68" max-vertical-offset="741">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/css/app.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="111" column="26" selection-start="1372" selection-end="1372" vertical-scroll-proportion="0.0" vertical-offset="2109" max-vertical-offset="4541">
@@ -410,20 +409,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/data.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="669" column="1" selection-start="51059" selection-end="51059" vertical-scroll-proportion="0.8058394" vertical-offset="12159" max-vertical-offset="12844">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="4" selection-start="593" selection-end="593" vertical-scroll-proportion="0.5444126" vertical-offset="0" max-vertical-offset="3629">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/lib/angular-animate.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="26" selection-start="5268" selection-end="5268" vertical-scroll-proportion="0.4160584" vertical-offset="0" max-vertical-offset="685">
@@ -433,16 +418,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/index.html">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="111" column="12" selection-start="4890" selection-end="4890" vertical-scroll-proportion="-16.321428" vertical-offset="1652" max-vertical-offset="2337">
+        <state line="2" column="6" selection-start="18" selection-end="18" vertical-scroll-proportion="0.054441262" vertical-offset="0" max-vertical-offset="698">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/emails.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="2008" selection-end="2008" vertical-scroll-proportion="-48.70657" vertical-offset="33782" max-vertical-offset="261098">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/emails.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="18" selection-start="896" selection-end="896" vertical-scroll-proportion="0.6940639" vertical-offset="0" max-vertical-offset="12825">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/emails_back.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="261098">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/csv_to_json.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="36" selection-start="343" selection-end="343" vertical-scroll-proportion="0.49182764" vertical-offset="49" max-vertical-offset="722">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="227" selection-end="227" vertical-scroll-proportion="0.32664755" vertical-offset="0" max-vertical-offset="698">
+        <state line="14" column="4" selection-start="255" selection-end="255" vertical-scroll-proportion="0.38108882" vertical-offset="0" max-vertical-offset="698">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="23" selection-start="665" selection-end="677" vertical-scroll-proportion="-9.5" vertical-offset="209" max-vertical-offset="1102">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="636" column="13" selection-start="47199" selection-end="47210" vertical-scroll-proportion="0.0" vertical-offset="12159" max-vertical-offset="12844">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="56" selection-start="2580" selection-end="2580" vertical-scroll-proportion="1.415214" vertical-offset="0" max-vertical-offset="2071">
           <folding />
         </state>
       </provider>
