@@ -3,32 +3,15 @@
 /* Controllers */
 
 angular.module('app.controllers', []).
-  controller('appController', [ '$scope', function($scope) {
-    $scope.emails = window.data;
+  controller('appController', [ '$scope', 'Emails', function($scope, Emails) {
+    $scope.emails = Emails.emails;
     $scope.slides = {};
-    $scope.slides.done = false;
+    $scope.slides.done = true;
 
-    // Ugh, should replace this with an array of opened emails
-    // and we just update it when we open/close stuff
-    $scope.unopenedEmails = function() {
-      var unopened = [];
-      $scope.emails.forEach(function(email){
-        if(email.open === false) {
-          unopened.push(email)
-        }
-      });
-      return unopened;
-    }
+    // pass-through methods from Emails Service
+    $scope.randomEmail = Emails.random;
+    $scope.closeAll    = Emails.closeAll;
 
-    // for getting a random email that isn't already open
-    $scope.randomEmail = function() {
-        var unopened = $scope.unopenedEmails();
-        var max = unopened.length - 1;
-        var min = 0;
-        // scales and converts rand float
-        var index = Math.floor(Math.random() * (max - min + 1)) + min;
-        return unopened[index]
-    }
     
     // for calculating an intersection of arrays, makes easier to compage tags
     $scope.intersect = function (a, b) {
@@ -42,12 +25,6 @@ angular.module('app.controllers', []).
           }
         }
         return result;
-    }
-
-    $scope.closeAll = function() {
-      $scope.emails.forEach(function(email) {
-        email.open = false;
-      });
     }
 
     // tags is needed in the sidebar and the main content, so setting up here
@@ -78,12 +55,8 @@ angular.module('app.controllers', []).
         });
     };
     $scope.createTags(); //invoke immediately
-
-    // selectedTagNames an array of tag names, makes easier to work with email[0].tags
-    // which are also an array of strings. $scope.tags is an array of objects
     $scope.selectedTagName = null;
     $scope.toggleTag = function(tag){
-
         // this is kinda ugh, but wanna let people pass in a string or an object, so
         // easy to call from anywhere
         if ( typeof tag === 'string') {
@@ -91,31 +64,19 @@ angular.module('app.controllers', []).
                 if( tagFromList.name == tag ) {
                     tag = tagFromList;
                 }
+                if(tagFromList != tag) {
+                  // reset any currently selected tags
+                  tagFromList.selected = false;
+                }
             });
         }
-
-       angular.forEach( $scope.tags, function(listTag, i){
-          if(listTag != tag) {
-            listTag.selected = false;
-          }
-       });
 
         if ($scope.selectedTagName === tag.name) {
           $scope.selectedTagName = null;
         } else {
           $scope.selectedTagName = tag.name;
         }
-
         tag.selected = !tag.selected;
-    }
-
-    //used in sidebar and content
-    $scope.tagFilter = function(email){
-        if($scope.selectedTagName === null){
-            return true
-        } else {
-            return $scope.intersect(email.tags, $scope.selectedTagName).length > 0 
-        }
     }
 
     $scope.inSelectedTagNames = function(tagname){
