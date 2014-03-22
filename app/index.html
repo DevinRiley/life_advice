@@ -45,7 +45,7 @@
         <div ng-controller="filterController">
           <h4>The answer is in: </h4>
             <span ng-repeat="tag in tags | orderBy:'-count' | limitTo: 8"
-                ng-click="toggleRandomFromTag(tag)"
+                ng-click="openAllWithTag(tag)"
                 ng-class="{ highlight: tag.selected }"
                 class="tag-name clickable">
                 {{ tag.name }}
@@ -70,7 +70,7 @@
 
       <div class="row">
         <div ng-controller="contentController" class="content col-sm-10 col-center">
-          <div class="animate-email" ng-repeat="email in emails | filter: {open: true} | filter:tagFilter | orderBy:'-position'">
+          <div class="animate-email" ng-repeat="email in emails | filter: {open: true} | orderBy:'-position'">
             <div class="content-email" ng-controller="emailFullController">
               <span class="content-close clickable" ng-click="closeEmail()"> Close </span>
               <h3 class="content-title"> {{ email.title }}</h1>

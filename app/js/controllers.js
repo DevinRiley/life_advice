@@ -81,7 +81,7 @@ angular.module('app.controllers', []).
 
     // selectedTagNames an array of tag names, makes easier to work with email[0].tags
     // which are also an array of strings. $scope.tags is an array of objects
-    $scope.selectedTagNames = [];
+    $scope.selectedTagName = null;
     $scope.toggleTag = function(tag){
 
         // this is kinda ugh, but wanna let people pass in a string or an object, so
@@ -94,33 +94,54 @@ angular.module('app.controllers', []).
             });
         }
 
-        var tagIndex = $scope.selectedTagNames.indexOf(tag.name)
-        if( tagIndex == -1 ){
-            $scope.selectedTagNames.push(tag.name)
+       angular.forEach( $scope.tags, function(listTag, i){
+          if(listTag != tag) {
+            listTag.selected = false;
+          }
+       });
+
+        if ($scope.selectedTagName === tag.name) {
+          $scope.selectedTagName = null;
         } else {
-            $scope.selectedTagNames.splice(tagIndex, 1)
+          $scope.selectedTagName = tag.name;
         }
+
         tag.selected = !tag.selected;
     }
 
     //used in sidebar and content
     $scope.tagFilter = function(email){
-        if($scope.selectedTagNames.length == 0){
+        if($scope.selectedTagName === null){
             return true
         } else {
-            return $scope.intersect(email.tags, $scope.selectedTagNames).length > 0 
+            return $scope.intersect(email.tags, $scope.selectedTagName).length > 0 
         }
     }
 
     $scope.inSelectedTagNames = function(tagname){
-        return ( $scope.selectedTagNames.indexOf(tagname) > -1)
+        return ( $scope.selectedTagName == tagname)
     }
 
+    $scope.openAllWithTag = function(tag) {
+      $scope.closeAll();
+      $scope.toggleTag(tag);
+      //open all with tag
+      $scope.emails.forEach(function(email){
+        if ($scope.intersect(email.tags, [$scope.selectedTagName]).length > 0) {
+          email.open = true;
+        }
+      });
+      $scope.emails.forEach(function(email) {
+        if (email.open === true) {
+          console.log(email); 
+        }
+      });
+    }
 
     $scope.toggleRandomFromTag = function(tag) {
       $scope.toggleTag(tag);
       $scope.randomEmail().open = true;
-      if ($scope.inSelectedTagNames(tag.name)) {
+      if ($scope.selectedTagName === (tag.name)) {
       }
 
     }
@@ -130,7 +151,7 @@ angular.module('app.controllers', []).
 
     $scope.incrementSlide = function() {
       $scope.currentSlide++;
-      if ($scope.currentSlide == 4) {
+      if ($scope.currentSlide === 4) {
         $scope.slides.done = true;
       }
     }
