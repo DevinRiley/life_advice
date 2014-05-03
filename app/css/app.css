@@ -208,18 +208,20 @@ blockquote {
 }
 
 .animate-slide {
-  -webkit-transition:0.2s ease all;
-  transition:0.2s ease all;
+  -webkit-transition:0.2s ease left;
+  transition:0.2s ease left;
   position: relative;
   width: 100%;
-  left: 0;
+  left: 0%;
 }
 
 .animate-slide.ng-hide {
+  left: 100%;
 }
 
 .animate-slide.ng-hide-remove-active {
   left: 100%;
+  margin-top: 100%;
 }
 
 .animate-slide.ng-hide-add-active {
