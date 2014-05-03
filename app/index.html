@@ -58,7 +58,8 @@
 
       <div class="row">
         <div class="content col-sm-10 col-center">
-          <div class="animate-email" ng-repeat="email in emailsByTag()">
+          <input type="text" ng-model="search.$">
+          <div class="animate-email" ng-repeat="email in emailsByTag() | filter:search">
             <div class="content-email">
               <h3 class="content-title"> {{ email.title }}</h3>
               <span class="content-tag"

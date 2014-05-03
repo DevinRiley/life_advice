@@ -17,7 +17,7 @@ angular.module('app.controllers', []).
 
     $scope.tags = ['Science',
         'Religion', 'Altruism','Nihilism', 'Family',
-        'Drugs', 'There is No Answer', 'Recommended','Work', 'Other'
+        'Drugs', 'There is No Answer', 'Recommended','Work', 'Other', 'All'
     ];
 
     $scope.selectedTag = 'Recommended';
@@ -30,6 +30,7 @@ angular.module('app.controllers', []).
     }
 
     $scope.emailsByTag = function(){
+        if ($scope.selectedTag === 'All') { return $scope.emails }
         var taggedEmails = [];
         $scope.emails.forEach(function(email){
             if (email.tags.indexOf($scope.selectedTag) > -1) {

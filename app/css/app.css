@@ -189,7 +189,7 @@ blockquote {
 }
 
 /* ----- ANIMATION ------ */
-
+/*
 .animate-email.ng-enter,
 .animate-email.ng-leave,
 .animate-email.ng-move {
@@ -206,6 +206,7 @@ blockquote {
 .animate-email.ng-enter.ng-enter-active {
   left: 0;
 }
+  */
 
 .animate-slide {
   -webkit-transition:0.2s ease left;

@@ -33,9 +33,8 @@ angular.module('app.services', [])
       }
 
       this.interpolateName = function(name) {
-         console.log(name);
-          this.emails.forEach(function(email) {
-            email.message = email.message.replace("{{ name }}", name);
-          });
+        this.emails.forEach(function(email) {
+          email.message = email.message.replace("{{ name }}", name);
+        });
       }
   });
