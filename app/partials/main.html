@@ -1,0 +1,43 @@
+<div class="non-slide-content animate-non-slide" ng-show="slides.done">
+  <div class="row">
+    <div class="sidebar col-sm-10 col-center">
+      <div>
+        <h4>The answer is in: </h4>
+          <span ng-repeat="tag in tags"
+              ng-click="selectTag(tag)"
+              ng-class="{ highlight: ( isSelected(tag) ) }"
+              class="tag-name clickable">
+              {{ tag }}
+          </span>
+      </div>
+    </div>
+</div>
+
+    <div class="row">
+      <div class="content col-sm-10 col-center">
+        <input type="text" placeholder="Search text" ng-model="search.$">
+        <div class="animate-email" ng-repeat="email in emailsByTag() | filter:search">
+          <div class="content-email">
+            <h3 class="content-title"> {{ email.title }}</h3>
+            <span class="content-tag"
+                  ng-repeat="tag in email.tags"
+                  ng-class="{ highlight: ( isSelected(tag) ) }">
+              {{ tag }}
+            </span>
+            <div class="row">
+              <div class="col-sm-10">
+                <div class="content-body">{{ email.message }}</div>
+              </div>
+              <div class="col-sm-2">
+                <div ng-show="email.pullQuote" class="pull-quote">
+                  <blockquote>{{ email.quote }}</blockquote>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+</div>
+

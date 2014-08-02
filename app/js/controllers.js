@@ -3,7 +3,7 @@
 /* Controllers */
 
 angular.module('app.controllers', []).
-  controller('appController', [ '$scope', 'Emails', function($scope, Emails) {
+  controller('appController', [ '$scope', '$state', 'Emails', function($scope, $state, Emails) {
     $scope.emails = Emails.emails;
     $scope.slides = {};
     $scope.slides.done = false;
@@ -11,8 +11,10 @@ angular.module('app.controllers', []).
     // pass-through methods from Emails Service
     $scope.randomEmail = Emails.random;
     $scope.closeAll    = Emails.closeAll;
-    $scope.interpolateName = function(name) {
+
+    $scope.onNameSubmit = function(name) {
       Emails.interpolateName(name);
+      $state.go('letter')
     }
 
     $scope.tags = ['Science',
@@ -21,6 +23,7 @@ angular.module('app.controllers', []).
     ];
 
     $scope.selectedTag = 'Recommended';
+
     $scope.selectTag  = function(tag){
         $scope.selectedTag = tag;
     }

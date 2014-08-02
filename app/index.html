@@ -8,84 +8,8 @@
   <link rel="stylesheet" href="css/app.css"/>
 </head>
 <body ng-controller="appController">
-
-  <div ng-hide="slides.done" ng-controller="slidesController">
-    <div ng-show="showSlide(1)" class="slide animate-slide">
-      <div class="slide-content">
-        <strong> This is a story about people </strong>
-        <p>AndAnd this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious 
-        this is a delicious litle slide paragraph</p>
-        <form ng-submit="incrementSlide(); interpolateName(name)"> 
-        <input auto-focus type="text" placeholder="First Name" ng-model="name" />
-        <button type="submit" value="Next" ng-disabled="name === null || name === ''" class="next-slide pull-right" >Next</button>
-        </form>
-      </div>
-    </div>
-    <div ng-show="showSlide(2)" class="slide animate-slide">
-      <div class="slide-content">
-        <strong>The Original Letter</strong>
-        <p>AndAnd this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious 
-        this is a delicious litle slide paragraph</p>
-        <span class="next-slide clickable pull-right" ng-click="incrementSlide()">Next</span>
-      </div>
-    </div>
-    <div ng-show="showSlide(3)" class="slide animate-slide">
-      <div class="slide-content">
-        <strong> This is a story about people </strong>
-        <p>AndAnd this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious And this is a delicious 
-        this is a delicious litle slide paragraph</p>
-        <span class="next-slide clickable pull-right" ng-click="incrementSlide()">Next</span>
-      </div>
-    </div>
-
-  </div>
-  
-  <div class="non-slide-content animate-non-slide" ng-show="slides.done">
-    <div class="row">
-      <div class="sidebar col-sm-10 col-center">
-        <div>
-          <h4>The answer is in: </h4>
-            <span ng-repeat="tag in tags"
-                ng-click="selectTag(tag)"
-                ng-class="{ highlight: ( isSelected(tag) ) }"
-                class="tag-name clickable">
-                {{ tag }}
-            </span>
-        </div>
-      </div>
-
-  </div>
-
-      <div class="row">
-        <div class="content col-sm-10 col-center">
-          <input type="text" ng-model="search.$">
-          <div class="animate-email" ng-repeat="email in emailsByTag() | filter:search">
-            <div class="content-email">
-              <h3 class="content-title"> {{ email.title }}</h3>
-              <span class="content-tag"
-                    ng-repeat="tag in email.tags"
-                    ng-class="{ highlight: ( isSelected(tag) ) }">
-                {{ tag }}
-              </span>
-              <div class="row">
-                <div class="col-sm-10">
-                  <div class="content-body">{{ email.message }}</div>
-                </div>
-                <div class="col-sm-2">
-                  <div ng-show="email.pullQuote" class="pull-quote">
-                    <blockquote>{{ email.quote }}</blockquote>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- END contentController -->
-      </div>
-
-
-    </div> 
-  </div>
+  <div ui-view></div>
+  <!-- ui-router renders templates here -->
 
 
   <!-- In production use:
@@ -94,7 +18,6 @@
   <script src="lib/angular/angular.js"></script>
   <script src="lib/angular-ui-router.js"></script>
   <script src="lib/angular-animate.min.js"></script>
-  <script src="lib/angular/angular-route.js"></script>
   <script src="js/data.js"></script>
   <script src="js/app.js"></script>
   <script src="js/services.js"></script>
