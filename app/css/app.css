@@ -37,10 +37,6 @@ body {
 .highlight {
 }
 
-.sidebar {
-    margin: 0 auto;
-}
-
 .col-center {
   float: none;
   margin: 0 auto;
@@ -114,7 +110,7 @@ body {
   padding-top: 1em;
 }
 
-.slide input { 
+input { 
   border: none;
   border-bottom: 1px solid black;
   display: block;

@@ -1,8 +1,10 @@
 <div class="non-slide-content animate-non-slide" ng-show="slides.done">
   <div class="row">
-    <div class="sidebar col-sm-10 col-center">
+    <div class="col-sm-11 col-sm-offset-1">
+      <h4>The answer is in: </h4>
+    </div>
+    <div class="col-sm-8 col-sm-offset-1">
       <div>
-        <h4>The answer is in: </h4>
           <span ng-repeat="tag in tags"
               ng-click="selectTag(tag)"
               ng-class="{ highlight: ( isSelected(tag) ) }"
@@ -11,11 +13,13 @@
           </span>
       </div>
     </div>
+    <div class="col-sm-1" >
+      <input type="text" placeholder="Search" ng-model="search.$"/>
+    </div>
 </div>
 
     <div class="row">
       <div class="content col-sm-10 col-center">
-        <input type="text" placeholder="Search text" ng-model="search.$">
         <div class="animate-email" ng-repeat="email in emailsByTag() | filter:search">
           <div class="content-email">
             <h3 class="content-title"> {{ email.title }}</h3>
